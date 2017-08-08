@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
   <style>
 body {margin:0;}
 
@@ -33,6 +40,17 @@ body {margin:0;}
   margin-top: 30px;
   height: 1500px; /* Used in this example to enable scrolling */
 }
+    #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
 </style>
 </head>
 <body>
@@ -40,11 +58,15 @@ body {margin:0;}
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <a href="#programming">programming</a>
-  <a href="#games">About</a>
+  <a href="#games">games</a>
 </div>
 <h1 align="center" id="home">Plus+</h1>
-<h3 align="center">Welcome to Plus</p>
-<p align="center"> 
+<h3 align="center">Welcome to Plus</h3>
+<p align="center">
+<div id="flip">you can </div>
+<div id="panel">Hello world!</div>
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
 
 </body>
 </html>
